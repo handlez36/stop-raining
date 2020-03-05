@@ -16,7 +16,7 @@ class App extends Component {
   onGeolocationUpdate = async ({ geolocationData, error }) => {
     const hasGeolocation = !error;
     const status = hasGeolocation
-      ? "Yep, you're browser's cool. You're good!"
+      ? "You're browser has geolocation skills, so you're good to go!"
       : error;
 
     let locationStr = "";
@@ -40,20 +40,22 @@ class App extends Component {
 
     return (
       <div className='App'>
-        <p>
-          Welcome! It's been raining for 40 days and 40 nights in Atlanta. Let's
-          check the upcoming forecast
-        </p>
-        <div className='request-status'>{status}</div>
-        {geolocationData && (
-          <Fragment>
-            <CurrentForecast
-              geolocationData={geolocationData}
-              locationStr={locationStr}
-            />
-            <FiveDayForecast geolocationData={geolocationData} />
-          </Fragment>
-        )}
+        <div className='weather-page'>
+          <p>
+            Welcome! It's been raining for 40 days and 40 nights in Atlanta.
+            Let's check the upcoming forecast
+          </p>
+          <div className='request-status'>{status}</div>
+          {geolocationData && (
+            <Fragment>
+              <CurrentForecast
+                geolocationData={geolocationData}
+                locationStr={locationStr}
+              />
+              <FiveDayForecast geolocationData={geolocationData} />
+            </Fragment>
+          )}
+        </div>
       </div>
     );
   }

@@ -3,8 +3,7 @@
   flex-direction: column;
   width: 140px;
   height: 110px;
-  margin: 0 auto;
-  /* border: 1px solid black; */
+  padding-top: 3vh;
 }
 .current-forecast .location,
 .current-forecast .time,
@@ -24,7 +23,6 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  /* border: 1px solid green; */
 }
 .current-forecast .temperature .icon {
   flex: 0 1 50%;

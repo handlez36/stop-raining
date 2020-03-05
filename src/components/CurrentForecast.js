@@ -52,6 +52,7 @@ const CurrentForecast = ({ geolocationData, locationStr }) => {
           Sorry, we're having trouble getting the weather data
         </div>
       )}
+      <h4>Current Forecast</h4>
       {weatherData && !error && (
         <Fragment>
           <div className='location'>{locationStr || city}</div>
