@@ -57,7 +57,7 @@ const CurrentForecast = ({ geolocationData, locationStr }) => {
         <Fragment>
           <div className='location'>{locationStr || city}</div>
           <div className='time'>{parseTime(dt)}</div>
-          <div className='status'>Cloudy</div>
+          <div className='status'>{description}</div>
           <div className='temperature'>
             <img className='icon' src={imgUrl} alt={description} />
             <div className='digits'>

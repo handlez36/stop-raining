@@ -32,7 +32,7 @@ class App extends Component {
 
   componentDidMount() {
     getGeolocationCoords(this.onGeolocationUpdate);
-    this.setState({ status: "Checking Geolocation availability?" });
+    this.setState({ status: "Checking Geolocation availability..." });
   }
 
   render() {
