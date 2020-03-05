@@ -1,0 +1,46 @@
+.current-forecast {
+  display: flex;
+  flex-direction: column;
+  width: 140px;
+  height: 150px;
+  margin: 0 auto;
+  /* border: 1px solid black; */
+}
+.current-forecast .location,
+.current-forecast .time,
+.current-forecast .status {
+  flex: 0 1 auto;
+  font-size: 10px;
+  text-align: left;
+  padding-left: 15px;
+  color: gray;
+}
+.current-forecast .location {
+  font-size: 14px;
+}
+.current-forecast .temperature {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 1px solid green; */
+}
+.current-forecast .temperature .icon {
+  flex: 0 1 50%;
+  width: 50%;
+}
+.current-forecast .temperature .digits {
+  flex: 0 1 50%;
+  width: 50%;
+  font-size: 46px;
+  font-weight: 600;
+  line-height: 34px;
+  text-align: left;
+  margin-top: -20px;
+}
+.current-forecast .temperature .unit {
+  font-size: 6px;
+  line-height: unset;
+  vertical-align: text-top;
+}
